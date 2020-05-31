@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:video_player/video_player.dart';
 
 import 'Vs1.dart';
 import 'Vs2.dart';
@@ -16,6 +16,33 @@ class Vik extends StatefulWidget {
 }
 
 class _VikState extends State<Vik> {
+
+  VideoPlayerController _controller;
+  Future<void> _initializeVideoPlayerFuture;
+
+  @override
+  void initState() {
+
+    _controller = VideoPlayerController.network(
+      'https://r5---sn-poufvj5cax-cvhl.googlevideo.com/videoplayback?expire=1590941659&ei=e4PTXoPbCMqX1Ab715WADA&ip=103.95.82.73&id=o-AMOgBXHj8lLM2ZzucA7kzs3K7GM61iHzJWcruFNtslJQ&itag=18&source=youtube&requiressl=yes&gcr=in&vprv=1&mime=video%2Fmp4&gir=yes&clen=17894005&ratebypass=yes&dur=245.852&lmt=1540143002196353&fvip=5&fexp=23882514&c=MWEB&txp=5431432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAIDbzk9Ks9XaPUMG9G1p2JxJcRKHTkA2G6u-XNMC2qfJAiEAs3VrQqWkGBS8M4ty6uqteIIvBgzhCbDUzz9UgWUncdU=&utmg=ytap1_f5av6OqFwz0&title=Vikings_season_1_trailer.mp4&cms_redirect=yes&mh=W5&mip=203.192.244.32&mm=31&mn=sn-poufvj5cax-cvhl&ms=au&mt=1590920011&mv=m&mvi=4&pcm2cms=yes&pl=24&lsparams=mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRgIhANTlPDz8Sl5tYjGSVOh76pd2U80fRO04W1SnuXn35TFKAiEA5FHlYqKWamBRr5bVoyqKUmh2LEfviHvCCkmFR9QUrQs%3D',
+    );
+
+
+    _initializeVideoPlayerFuture = _controller.initialize();
+
+
+    _controller.setLooping(true);
+    super.initState();
+
+  }
+  @override
+  void dispose() {
+
+    _controller.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,15 +55,47 @@ class _VikState extends State<Vik> {
           color: Colors.white
         ),
         ),
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.black,
       ),
       body:ListView(
 
         children:<Widget>[Column(
 
           children: <Widget>[
+            FutureBuilder(
+              future: _initializeVideoPlayerFuture,
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.done) {
+
+                  return AspectRatio(
+                    aspectRatio: _controller.value.aspectRatio,
+
+                    child: VideoPlayer(_controller),
+                  );
+                } else {
+
+                  return Center(child: CircularProgressIndicator());
+                }
+              },
+            ),
+
+
             Container(
-              child: Image.asset('assets/v1.jpg'),
+              child: FlatButton.icon(
+                color: Colors.white,
+                onPressed: () {
+
+                  setState(() {
+
+                    if (_controller.value.isPlaying) {
+                      _controller.pause();
+                    } else {
+
+                      _controller.play();
+                    }
+                  });
+                },
+                icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Play'),),
             ),
             SizedBox(height: 20,),
             Container(
