@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
 
       appBar: AppBar(
-        title: Text('Web Series',
+        title: Text('TV Shows',
 
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -50,245 +50,239 @@ class _HomeState extends State<Home> {
 
         ),
         actions: <Widget>[
-          FlatButton.icon(onPressed: ()async{await _auth.signOut();}, icon: Icon(Icons.person), label: Text('Logout'))
+          FlatButton.icon(onPressed: ()async{await _auth.signOut();}, icon: Icon(Icons.person,color: Colors.white,), label: Text('Logout',style: TextStyle(color: Colors.white),))
         ],
         centerTitle: true,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.black,
       ),
-      body:Column(
-        children: <Widget>[
-          Expanded(
-            child: Expanded(
-              child:Card(
-                color: Colors.grey[300],
-                child:Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 12,
-
-                      child: Image.asset('assets/Friends.jpg'),
-
-
-                    ),
-                    Expanded(
-
-                      flex: 7,
-                      child: Text('F.R.I.E.N.D.S',
-                        style:TextStyle(
-                          fontStyle: FontStyle.italic,
-                        ),),
-
-                    ),
-                    Expanded(
-                      flex: 4,
-                      child: Text('Imdb:8.9'),
-                    ),
-                    Expanded(
-                        flex: 6,
-                        child: RaisedButton(
-                          onPressed: (){
-                            Navigator.push(context, new MaterialPageRoute(builder: (context)=>Friends()));
-                          },
-                          child: Text('details'),
-                        )
-                    ),
-
-
-
-                  ],
-
+      body:ListView(
+        children:<Widget>[ Column(
+          children: <Widget>[
+            Card(
+                  color: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(16.0),
+                  ),
+                  child:Column(
+                    children: <Widget>[
+                      ClipRRect(
+                        child: new Image.asset(
+                          'assets/FRI.jpg'
+                        ),
+                        borderRadius: BorderRadius.only(
+                          topLeft: new Radius.circular(16.0),
+                          topRight: new Radius.circular(16.0),
+                        ),
+                      ),
+                          Text('F.R.I.E.N.D.S',
+                            style: TextStyle(
+                              color: Colors.white
+                            ),
+                          ),
+                         SizedBox(height: 20.0,),
+                         Text('Imdb:8.9',
+                         style: TextStyle(
+                           color: Colors.white,
+                         ),),
+                      SizedBox(height: 20.0,),
+                           RaisedButton(
+                            onPressed: (){
+                              Navigator.push(context, new MaterialPageRoute(builder: (context)=>Friends()));
+                            },
+                            child: Text('details'),
+                          )
+                    ],
+                  ),
                 ),
 
+            Card(
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(16.0),
               ),
-            ),
-          ),
-
-          Expanded(
-
-            child: Expanded(
-              child:Card(
-                color: Colors.grey[300],
-                child:Row(
-                  children: <Widget>[
-                    Expanded(
-                      flex: 12,
-                      child: Image.asset('assets/GOT.jpg'),
-                    ),
-                    Expanded(
-                      flex: 7,
-                      child: Text('Game Of Thrones',
-                        style: TextStyle(
-                          fontStyle: FontStyle.italic,
-                        ),),
-                    ),
-                    Expanded(
-                      flex: 4,
-                      child: Text('Imdb:9.1'),
-                    ),
-                    Expanded(
-                        flex: 6,
-                        child: RaisedButton(
-                          onPressed: (){
-                            Navigator.push(context, new MaterialPageRoute(builder: (context)=>GOT()));
-                          },
-                          child: Text('details'),
-                        )
-                    ),
-
-
-
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          Expanded(
-            child:Card(
-              color: Colors.grey[300],
-              child:Row(
+              child:Column(
                 children: <Widget>[
-                  Expanded(
-                    flex:12,
-
-                    child: Image.asset('assets/Vik.jpg'),
+                  ClipRRect(
+                    child: new Image.asset(
+                        'assets/GGT.jpg'
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: new Radius.circular(16.0),
+                      topRight: new Radius.circular(16.0),
+                    ),
                   ),
-                  Expanded(
-                    flex: 7,
-                    child: Text('Vikings',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                      ),),
+                  Text('Game Of Thrones',
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
                   ),
-                  Expanded(
-                    flex: 4,
-                    child: Text('Imdb:8.8'),
-                  ),
-                  Expanded(
-                      flex: 6,
-                      child: RaisedButton(
-                        onPressed: (){
-                          Navigator.push(context, new MaterialPageRoute(builder: (context)=>Vik()));
-                        },
-                        child: Text('details'),
-                      )
-                  ),
-
-
-
+                  SizedBox(height: 20.0,),
+                  Text('Imdb:9.1',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  SizedBox(height: 20.0,),
+                  RaisedButton(
+                    onPressed: (){
+                      Navigator.push(context, new MaterialPageRoute(builder: (context)=>GOT()));
+                    },
+                    child: Text('details'),
+                  )
                 ],
               ),
             ),
-          ),
 
-          Expanded(
-            child:Card(
-              color: Colors.grey[300],
-              child:Row(
-
+            Card(
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(16.0),
+              ),
+              child:Column(
                 children: <Widget>[
-                  Expanded(
-                    flex:12,
-                    child: Image.asset('assets/MH.jpg'),
+                  ClipRRect(
+                    child: new Image.asset(
+                        'assets/VVII.jpg'
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: new Radius.circular(16.0),
+                      topRight: new Radius.circular(16.0),
+                    ),
                   ),
-                  Expanded(
-                    flex: 7,
-                    child: Text('Money Heist',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                      ),),
+                  Text('Vikings',
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
                   ),
-                  Expanded(
-                    flex: 4,
-                    child: Text('Imdb:8.5'),
-                  ),
-                  Expanded(
-                      flex: 6,
-                      child: RaisedButton(
-                        onPressed: (){
-                          Navigator.push(context, new MaterialPageRoute(builder: (context)=>MH()));
-                        },
-                        child: Text('details'),
-                      )
-                  ),
-
+                  SizedBox(height: 20.0,),
+                  Text('Imdb:8.8',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  SizedBox(height: 20.0,),
+                  RaisedButton(
+                    onPressed: (){
+                      Navigator.push(context, new MaterialPageRoute(builder: (context)=>Vik()));
+                    },
+                    child: Text('details'),
+                  )
                 ],
               ),
             ),
-          ),
-
-          Expanded(
-            child:Card(
-              color: Colors.grey[300],
-              child:Row(
+            Card(
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(16.0),
+              ),
+              child:Column(
                 children: <Widget>[
-                  Expanded(
-                    flex:12,
-                    child: Image.asset('assets/off.jpg'),
+                  ClipRRect(
+                    child: new Image.asset(
+                        'assets/MMHH.jpg'
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: new Radius.circular(16.0),
+                      topRight: new Radius.circular(16.0),
+                    ),
                   ),
-                  Expanded(
-                    flex: 7,
-                    child: Text('The Office',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                      ),),
+                  Text('Money Heist',
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
                   ),
-                  Expanded(
-                    flex: 4,
-                    child: Text('Imdb:8.9'),
-                  ),
-                  Expanded(
-                      flex: 6,
-                      child: RaisedButton(
-                        onPressed: (){
-                          Navigator.push(context, new MaterialPageRoute(builder: (context)=>Of()));
-                        },
-                        child: Text('details'),
-                      )
-                  ),
-
-
+                  SizedBox(height: 20.0,),
+                  Text('Imdb:8.5',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  SizedBox(height: 20.0,),
+                  RaisedButton(
+                    onPressed: (){
+                      Navigator.push(context, new MaterialPageRoute(builder: (context)=>MH()));
+                    },
+                    child: Text('details'),
+                  )
                 ],
               ),
             ),
-          ),
 
-          Expanded(
-            child:Card(
-              color: Colors.grey[300],
-              child:Row(
+            Card(
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(16.0),
+              ),
+              child:Column(
                 children: <Widget>[
-                  Expanded(
-                    flex:12,
-                    child: Image.asset('assets/PB.jpg'),
+                  ClipRRect(
+                    child: new Image.asset(
+                        'assets/OOFF.jpg'
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: new Radius.circular(16.0),
+                      topRight: new Radius.circular(16.0),
+                    ),
                   ),
-                  Expanded(
-                    flex: 7,
-                    child: Text('Peaky Blinders',
-                      style: TextStyle(
-                        fontStyle: FontStyle.italic,
-                      ),),
+                  Text('The Office',
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
                   ),
-                  Expanded(
-                    flex: 4,
-                    child: Text('Imdb:8.8'),
-                  ),
-                  Expanded(
-                      flex: 6,
-                      child: RaisedButton(
-                        onPressed: (){
-                          Navigator.push(context, new MaterialPageRoute(builder: (context)=>PB()));
-                        },
-                        child: Text('details'),
-                      )
-                  ),
-
-
+                  SizedBox(height: 20.0,),
+                  Text('Imdb:8.9',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  SizedBox(height: 20.0,),
+                  RaisedButton(
+                    onPressed: (){
+                      Navigator.push(context, new MaterialPageRoute(builder: (context)=>Of()));
+                    },
+                    child: Text('details'),
+                  )
                 ],
               ),
             ),
-          ),
-        ],
+            Card(
+              color: Colors.black,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(16.0),
+              ),
+              child:Column(
+                children: <Widget>[
+                  ClipRRect(
+                    child: new Image.asset(
+                        'assets/PPBB.jpg'
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: new Radius.circular(16.0),
+                      topRight: new Radius.circular(16.0),
+                    ),
+                  ),
+                  Text('F.R.I.E.N.D.S',
+                    style: TextStyle(
+                        color: Colors.white
+                    ),
+                  ),
+                  SizedBox(height: 20.0,),
+                  Text('Imdb:8.8',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),),
+                  SizedBox(height: 20.0,),
+                  RaisedButton(
+                    onPressed: (){
+                      Navigator.push(context, new MaterialPageRoute(builder: (context)=>PB()));
+                    },
+                    child: Text('details'),
+                  )
+                ],
+              ),
+            ),
+
+
+
+          ],
+        ),
+    ],
       ),
       backgroundColor: Colors.grey,
 

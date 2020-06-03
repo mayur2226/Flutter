@@ -24,7 +24,7 @@ class _PBState extends State<PB> {
   void initState() {
 
     _controller = VideoPlayerController.network(
-      'https://r3---sn-poufvj5cax-cvhl.googlevideo.com/videoplayback?expire=1590941505&ei=4YLTXrCkHpSNkgac-bCAAw&ip=194.105.158.219&id=o-AG9wfbz89bmjhgslFuSnCaMwJPLjM4YLX1-1tmb7DdxZ&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&gir=yes&clen=6222696&ratebypass=yes&dur=127.523&lmt=1586033835699967&fvip=3&c=MWEB&txp=5431432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAL_v5aa8qAYcqEjebjmUzZStRKZcxi3I2ZfWudwujk7SAiEAx9USfNlYyRfgycZ4YJgozQWmb3RXHVmJHIFUFLEg3X8%3D&utmg=ytap1_oVzVdvGIC7U&title=Peaky_Blinders_-_Season_1__Trailer.mp4&cms_redirect=yes&mh=vA&mip=203.192.244.32&mm=31&mn=sn-poufvj5cax-cvhl&ms=au&mt=1590919832&mv=m&mvi=2&pcm2cms=yes&pl=24&lsparams=mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRQIhAPbvtg6ebfAzZPk2hhRr7173zMpkQwRK4kv0wMXeBW2QAiBp_3x-yrdgC7qF1MV8ew9J-4g8CaE7b01brw9onxvTVA%3D%3D',
+      'https://firebasestorage.googleapis.com/v0/b/flut-450aa.appspot.com/o/Peaky_Blinders_-_Season_1__Trailer.mp4.mp4?alt=media&token=288fc48b-3043-4c7c-a9cb-c283b58436ed',
     );
 
 
@@ -95,7 +95,7 @@ class _PBState extends State<PB> {
                     }
                   });
                 },
-                icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Play'),),
+                icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Trailer'),),
             ),
             SizedBox(height: 20,),
             Container(

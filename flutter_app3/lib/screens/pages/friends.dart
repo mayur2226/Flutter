@@ -28,7 +28,7 @@ class _FriendsState extends State<Friends> {
   void initState() {
 
     _controller = VideoPlayerController.network(
-      'https://r3---sn-poufvj5cax-cvhl.googlevideo.com/videoplayback?expire=1590929355&ei=a1PTXufoKIHOkgbK4IC4BA&ip=91.229.105.127&id=o-AGlazT-LFUltkoXqqncgGwa8tPxDUBbH0ZspFOEz-Jpn&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&gir=yes&clen=13580915&ratebypass=yes&dur=180.697&lmt=1573567471660197&fvip=3&fexp=23882513&beids=9466586&c=MWEB&txp=5431432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRAIgCadyhzBaHksrMPiGrUy4QrTcth-GZn395juEP20jE_ECIHta0Ny1z7_cZTO98V7CSeTMca6Dpy0yvewWkRt6pc-s&utmg=ytap1_SHvzX2pl2ec&title=Friends_TV_Series__1994_Season_1_Trailer.mp4&cms_redirect=yes&mh=0a&mip=203.192.244.32&mm=31&mn=sn-poufvj5cax-cvhl&ms=au&mt=1590915933&mv=m&mvi=2&pcm2cms=yes&pl=24&lsparams=mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRAIgMKWuaHanTGgO4rmyffeOVJfRmzyhuk59VMA6xIP4ERsCIArIR-pkcZDv9gR8jLr2Vr0mUE7Y-4ou5ziA35eoOUC_',
+      'https://firebasestorage.googleapis.com/v0/b/flut-450aa.appspot.com/o/frt.mp4?alt=media&token=1affe15a-9680-4f68-8415-f00fc0e56365',
     );
 
 
@@ -104,7 +104,7 @@ class _FriendsState extends State<Friends> {
                   }
                 });
               },
-               icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Play'),),
+               icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Trailer'),),
           ),
 
           SizedBox(height: 20,),

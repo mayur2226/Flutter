@@ -24,7 +24,7 @@ class _OfState extends State<Of> {
   void initState() {
 
     _controller = VideoPlayerController.network(
-      'https://r3---sn-poufvj5cax-cvhl.googlevideo.com/videoplayback?expire=1590941349&ei=RILTXs6jPJ7v4-EP7cubyA8&ip=124.253.220.154&id=o-AEtnh-Np58NNOFqeVJ0oYyL41F7VgXYPOixwjIZXWhuW&itag=18&source=youtube&requiressl=yes&gcr=in&vprv=1&mime=video%2Fmp4&gir=yes&clen=6072959&ratebypass=yes&dur=119.420&lmt=1508303885994519&fvip=3&c=MWEB&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cgcr%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAN5-JEikfmQ2rAMlpkVhPG5hWPLWHXA8IbL97S1QklfxAiA4_3DTOzE125A68YLfEDnLjC0CDmZ7znQwZdppRKkoDQ%3D%3D&utmg=ytap1_LHOtME2DL4g&title=The_Office_Trailer_2017.mp4&cms_redirect=yes&mh=kP&mip=203.192.244.32&mm=31&mn=sn-poufvj5cax-cvhl&ms=au&mt=1590919712&mv=m&mvi=2&pcm2cms=yes&pl=24&lsparams=mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRQIgfnwj0Uo77AqoLIMk3grvlvs6ofBJmHiQ63sMzwNd4VECIQCPT15gxtv2yqb10NWG8K2DzVkTZXQYU56pOtnENaCkEw%3D%3D',
+      'https://firebasestorage.googleapis.com/v0/b/flut-450aa.appspot.com/o/of.mp4?alt=media&token=cd9d50c6-fcc2-4222-b6bd-51d2b0b1e41e',
     );
 
 
@@ -97,7 +97,7 @@ class _OfState extends State<Of> {
                     }
                   });
                 },
-                icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Play'),),
+                icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Trailer'),),
             ),
             SizedBox(height: 20,),
             Container(

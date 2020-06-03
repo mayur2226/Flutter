@@ -21,7 +21,7 @@ class _MHState extends State<MH> {
   void initState() {
 
     _controller = VideoPlayerController.network(
-      'https://r2---sn-poufvj5cax-cvhl.googlevideo.com/videoplayback?expire=1590941065&ei=KIHTXrDqOZeJkwaT8YXoDw&ip=91.198.230.15&id=o-AFMBRyF0odqlTZrwXwZXmDuo6vBxp5ynFuLMwJAAlzjN&itag=18&source=youtube&requiressl=yes&vprv=1&mime=video%2Fmp4&gir=yes&clen=4427755&ratebypass=yes&dur=77.067&lmt=1585899174531247&fvip=2&fexp=23882513&c=MWEB&txp=5531432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIgWbSlEfLBS-s6cgGNPgDoYskt6q0pCnpM38GFIy1H5gECIQCHx0TUlCP1uotXb5mJ01IN4ZK8foXCHmiQiOk22FqQNA%3D%3D&utmg=ytap1_fvCdLmxnkj0&title=Money_Heist_-_Part_1__Official_Trailer__Netflix.mp4&cms_redirect=yes&mh=Ly&mip=203.192.244.32&mm=31&mn=sn-poufvj5cax-cvhl&ms=au&mt=1590919413&mv=m&mvi=1&pcm2cms=yes&pl=24&lsparams=mh,mip,mm,mn,ms,mv,mvi,pcm2cms,pl&lsig=AG3C_xAwRAIgYMQs8KlGimPBchg2TFpcxlJ3CTFR9qkW0CSR7e7ShyYCIDpynPBCebegl9N6cG2l5ZZVpXzJngkwQ65oO4djmVWG',
+      'https://firebasestorage.googleapis.com/v0/b/flut-450aa.appspot.com/o/Money_Heist_-_Part_1__Official_Trailer__Netflix.mp4.mp4?alt=media&token=19a74eee-fd9e-44f4-bc9b-fbe92e3a02f5',
     );
 
 
@@ -97,7 +97,7 @@ class _MHState extends State<MH> {
                 }
               });
             },
-            icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Play'),),
+            icon: Icon(_controller.value.isPlaying?Icons.pause:Icons.play_arrow), label: Text('Trailer'),),
         ),
     SizedBox(height: 20,),
     Container(
